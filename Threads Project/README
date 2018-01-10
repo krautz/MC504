@@ -1,0 +1,67 @@
+Projeto MC504 -- Problema Dos Fumantes 
+Alunos do Grupo 
+    NOME                       RA  
+    Caio Krauthamer            165447
+    Heitor Boschirolli Comel   169477
+    João Phillipe Cardenuto    170674
+
+Explicação sobre a animação:
+
+A Animação começa com os Fumantes se apresentando.
+  `\~P~/´   Fumante que contem papel infinito
+     |      
+
+   '\T/'   Fumante que contem tabaco infinito
+     |     
+
+   '\M/'   Fumante que contem fósforo infinito
+     |  
+
+Logo em seguida os fumantes esperam o Agente produzir e colocar na mesa(recurso compartilhado) 
+os materiais necessarios para a produção de Cigarros.
+Ex: Agent : Suppling(TABACCO AND MATCHES)    // Agente Produziu Tabaco e Fósforos
+   
+    Agent: Tobbaco  |.*.|  is on the Table   // Agente disponibilizou o Tabacco na  mesa 
+    Agent: Matches | ---O | is on the Table  // Agente disponibilizou o Fósforo na  mesa 
+    Agent: Paper |##| is on the table // Agente disponibilizou o Papel na  mesa 
+
+Logo após disponibilizar algum recurso para o cigarro um dos fumantes é sinalizado e fica pronto para fumar.
+O fumante só começa a fumar se ele verifica que o número de cigarros não atingiu o limite global de cigarros feitos.
+Ex:
+       
+Smoker paper  `\~P~/´  READY to smoke...  // Fumante com suprimento infinito de papel está pronto para fumar pois pegou da mesa
+                 |                         // O tabaco e o fósforo fornecido pelo agente.
+
+Logo depois de ficar pronto o fumante Começa a fumar o cigarro 
+Ex:
+Smoker paper  `\~P~/´  STARTED smoking // Fumante começou a fumar
+
+E Após o termino de fumar aparece a quantidade de cigarros que cada um dos fumantes já fumou:
+Ex:
+Smoker paper  `\~P~/´  FINESHED smoking
+                 |      
+
+Cigarets Smoked So far...       // Sendo P o fumante com suprimento infinito de papel
+| P | T | M |                   // Sendo T o fumante com suprimento infinito de Tabaco
+| 2 | 2 | 1 |                   // Sendo M o fumante com suprimento infinito de Fósforo
+
+
+Ao passar MAX_CIGARRETS Fumados, os fumantes param de fumar , ainda que o agente coloque algo na mesa, e o programa acaba com a mensagem de quantos ciagarros cada um fumou:
+
+Ex:
+Smoker  with paper ## `\~P~/´    ## smoked 4 cigarets   // Fumante com Papel fumou 4 cigarros
+                   ##    |       ##
+
+Smoker  with tobacco *.   '\T/'    *. smoked 3 cigarets // Fumante com Papel fumou 3 cigarros
+                     .*     |      .*
+
+Smoker  with Matches o    '\M/'    o   smoked 3 cigarets // Fumante com Papel fumou 3 cigarros
+                     |      |      |
+
+
+
+
+
+
+
+
